@@ -11,25 +11,46 @@
         <h1>中秋节节目投票</h1>
         <div id="programList">
             <!-- 模拟的节目列表 -->
-            <div class="program">
-                <h3>节目一</h3>
-                <img src="uploads/photo1.jpg" alt="节目一">
-                <button class="btn" onclick="vote(1)">投票</button>
-            </div>
-            <div class="program">
-                <h3>节目二</h3>
-                <img src="uploads/photo2.jpg" alt="节目二">
-                <button class="btn" onclick="vote(2)">投票</button>
-            </div>
+            <!-- 这些节目项会被脚本动态加载 -->
         </div>
+        <div id="voteMessage" class="hidden"></div>
     </div>
+
     <div class="container">
-        <h2>管理者登录</h2>
+        <h2>管理员登录</h2>
         <div id="loginForm">
             <input type="password" id="adminPassword" placeholder="输入管理员密码">
             <button class="btn" onclick="adminLogin()">登录</button>
         </div>
     </div>
+
+    <div id="adminMenu" class="hidden">
+        <h2>管理菜单</h2>
+        <button class="btn" onclick="showUploadForm()">上传节目</button>
+        <button class="btn" onclick="resetVotes()">重置投票</button>
+        <button class="btn" onclick="showStatistics()">显示统计</button>
+        <button class="btn" onclick="changeBackground()">更换背景</button>
+        <button class="btn" onclick="logout()">登出</button>
+    </div>
+
+    <!-- 上传节目表单 -->
+    <div id="uploadForm" class="hidden">
+        <h2>上传节目</h2>
+        <input type="text" id="programName" placeholder="节目名称">
+        <input type="file" id="programPhoto">
+        <button class="btn" onclick="uploadProgram()">上传</button>
+    </div>
+
+    <!-- 显示统计信息 -->
+    <div id="statistics" class="hidden"></div>
+
+    <!-- 更换背景表单 -->
+    <div id="backgroundForm" class="hidden">
+        <h2>更换背景</h2>
+        <input type="file" id="backgroundImage">
+        <button class="btn" onclick="uploadBackground()">上传背景</button>
+    </div>
+
     <script src="scripts.js"></script>
 </body>
 </html>
