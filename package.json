@@ -10,6 +10,6 @@
         "express": "^4.17.1",
         "body-parser": "^1.19.0",
         "express-fileupload": "^1.2.1",
-        "bcryptjs": "^2.4.3" // 添加 bcryptjs 依赖
+        "bcryptjs": "^2.4.3" 
     }
 }
