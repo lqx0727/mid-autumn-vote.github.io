@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中秋节节目投票</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>中秋节节目投票</h1>
+        <div id="programList">
+            <!-- 节目列表将在这里生成 -->
+        </div>
+    </div>
+    <div class="container">
+        <h2>管理者登录</h2>
+        <div id="loginForm">
+            <input type="password" id="adminPassword" placeholder="输入管理员密码">
+            <button class="btn" onclick="adminLogin()">登录</button>
+        </div>
+        <div class="admin-menu hidden" id="adminMenu">
+            <button onclick="showUploadForm()">上传/修改照片</button>
+            <button onclick="resetVotes()">重置投票</button>
+            <button onclick="logout()">登出</button>
+            <button onclick="showStatistics()">显示统计</button>
+            <button onclick="changeBackground()">更换背景</button>
+        </div>
+        <div id="uploadForm" class="hidden">
+            <input type="text" id="programName" placeholder="节目名称">
+            <input type="file" id="programPhoto" accept="image/*">
+            <button class="btn" onclick="uploadProgram()">上传</button>
+        </div>
+        <div id="statistics" class="hidden">
+            <!-- 统计信息将显示在这里 -->
+        </div>
+        <div id="backgroundForm" class="hidden">
+            <input type="file" id="backgroundImage" accept="image/*">
+            <button class="btn" onclick="uploadBackground()">更换背景</button>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
